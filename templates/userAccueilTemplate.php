@@ -1,6 +1,3 @@
-<nav>
-	<a href="index.php?controller=user&action=viewProfil">Mon profil</a>
-</nav>
 
 <div id="content">
 
@@ -8,6 +5,7 @@
 	
 	<p>Tu as envie de rejoindre une partie? Consulte les parties en cours !</p>
 	
+	<p><a href="index.php?controller=user&action=viewProfil">Consulte ton profil !</a></p>
 	
 	<div id="contenuAccueil">
 		<div id="partiesEnCours">
