@@ -87,7 +87,7 @@
    				 	$newRequest->write('controller','user');
 					$newRequest->write('action','defaultAction');
 				 	$newRequest->write('user',$log);
-					echo 'User : '.$newRequest->read('user');
+					//echo 'User : '.$newRequest->read('user');
     				$controller = Dispatcher::getCurrentDispatcher()->dispatch($newRequest);
 					try {
 						// Execute the requested action
