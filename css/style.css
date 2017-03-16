@@ -142,3 +142,14 @@ button:active{
 	margin : 30px;
 }
 
+/*PARAMETRES PROFIL*/
+
+#info_perso{
+	border : solid white;
+	margin : 20px;
+}
+
+#stats{
+	border : solid white;
+	margin : 20px;
+}
