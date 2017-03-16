@@ -10,7 +10,7 @@
 		<div id="header">
 			<div id="blocks">
 				<div id="icon">
-					<img src="../images/Logo2.png" alt="Logo2" style="width:100px;height:100px;">
+					<a href="index.php?action=defaultAction"><img src="../images/Logo2.png" alt="Logo2" style="width:100px;height:100px;"></a>
 				</div>
 				
 				<div id="block2">
