@@ -8,7 +8,7 @@
 			$request = Request::getCurrentRequest();
 			parent::__construct($request);
 			$_SESSION['login']=$request->read('user');
-			echo $request->read('user');
+			//echo $request->read('user');
 			
 			
 		}
