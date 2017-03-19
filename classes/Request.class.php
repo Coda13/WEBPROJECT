@@ -29,14 +29,20 @@
 				return $_GET['action'];
 		}
 		
-		public function read($text){
+		/*public function read($text){
 			//permet de lire les champs rentrés dans inscriptionTemplate
 			if(isset($_POST[$text]))
 				return $_POST[$text];
+		}*/
+		
+		static function read($str){
+		if(isset($_GET[$str]))
+			return $_GET[$str];
+		return $_POST[$str];
 		}
 		
 		
-		public function write($get, $valeur){	//permet de changer les champs de l'URL
+		static function write($get, $valeur){	//permet de changer les champs de l'URL
 			$_GET[$get]=$valeur;				
 		}
 	}
