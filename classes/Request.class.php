@@ -29,16 +29,10 @@
 				return $_GET['action'];
 		}
 		
-		/*public function read($text){
+		public function read($text){
 			//permet de lire les champs rentrés dans inscriptionTemplate
 			if(isset($_POST[$text]))
 				return $_POST[$text];
-		}*/
-		
-		static function read($str){
-		if(isset($_GET[$str]))
-			return $_GET[$str];
-		return $_POST[$str];
 		}
 		
 		
