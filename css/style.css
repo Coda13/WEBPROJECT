@@ -23,7 +23,7 @@ a{
 }
 
 a:visited {
-    color: orange;
+    color: gray;
 }
 
 h2{
@@ -36,6 +36,16 @@ h1{
 	font-size : 25px;
 }
 
+p{
+	text-align : center;
+}
+
+#error{
+	text-align : center;
+	background-color : #cc0000;
+	width : 50%;
+	margin : auto;
+}
 
 
 #content{
@@ -132,3 +142,14 @@ button:active{
 	margin : 30px;
 }
 
+/*PARAMETRES PROFIL*/
+
+#info_perso{
+	border : solid white;
+	margin : 20px;
+}
+
+#stats{
+	border : solid white;
+	margin : 20px;
+}
