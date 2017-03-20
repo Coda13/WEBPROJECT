@@ -14,12 +14,10 @@
 				</div>
 				
 				<div id="block2">
-					<div id="inscription">
-						<a href="index.php?action=viewInscription">Inscription</a>
+					<div id="user" type="div">
+						<img src="../images/anonymous.png" alt="anonymous" style="width:90px;height:90px;">
+						<a href="index.php?action=viewProfil">Login : </a>
 					</div>
-					<button id="connexion" type="button">
-						<a href="index.php?action=viewConnexion">YOYOYO</a>
-					</button>
 				</div>
 			</div>
 		</div>
