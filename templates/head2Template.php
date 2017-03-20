@@ -22,11 +22,11 @@
 						<img src="../images/anonymous.png" alt="anonymous" style="width:80px;height:80px;">
 					</div>
 						
-					<div id="user">
-						<p>User : <?php echo User::getPrenom($login) ?>
-						Statut : Connecté</p>
-						<a href="index.php?action=viewProfil">Voir profil</a>
-					</div>
+					
+					<p>User : <?php echo User::getPrenom($login) ?><br />
+					Statut : Connecté<br/>
+					<a href="index.php?action=viewProfil">Voir profil</a></p>
+					
 					
 					<div id="deconnexion">
 						<a href="index.php?action=deconnexion"><img src="../images/logout.png" alt="logout" style="width:50px;height:50px;"></a>
