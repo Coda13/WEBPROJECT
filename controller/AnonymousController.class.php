@@ -58,6 +58,7 @@
 			}
 			
 		}
+		//include '../classes/Request.class.php';
 		
 		/*******/
 		
@@ -87,6 +88,9 @@
    				 	$newRequest->write('controller','user');
 					$newRequest->write('action','defaultAction');
 				 	$newRequest->write('user',$log);
+					echo 'Mon login = '.$log;
+					$_SESSION['login']=$log;
+					print_r($_SESSION);
 					//echo 'User : '.$newRequest->read('user');
     				$controller = Dispatcher::getCurrentDispatcher()->dispatch($newRequest);
 					try {
