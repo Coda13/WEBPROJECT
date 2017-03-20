@@ -23,7 +23,9 @@
 	// Load the Loader class to automatically load classes when needed
 	require_once(__ROOT_DIR . '/classes/AutoLoader.class.php');
 	
-	
+	session_start();
+	//session_destroy();
+	print_r($_SESSION);
 	// Reify the current request
 	$request = Request::getCurrentRequest();
 	
