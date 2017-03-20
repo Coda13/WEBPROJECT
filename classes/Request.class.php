@@ -15,7 +15,7 @@
 		
 		static function getNameController(){
 			if(!isset($_GET['controller']))
-				return 'Anonymous';
+				return NULL;
 			else 
 				return ($_GET['controller']);
 			//on regarde dans l'url pour recuper la requete et la clef de l user
