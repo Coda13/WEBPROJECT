@@ -13,11 +13,25 @@
 					<a href="index.php?action=defaultAction"><img src="../images/Logo2.png" alt="Logo2" style="width:100px;height:100px;"></a>
 				</div>
 				
-				<div id="block2">
-					<div id="user" type="div">
-						<img src="../images/anonymous.png" alt="anonymous" style="width:90px;height:90px;">
-						<a href="index.php?action=viewProfil">Login : </a>
+				<?php
+					$login = User::get_login();
+				?>
+				
+				<div id="block3">
+					<div id="avatar">
+						<img src="../images/anonymous.png" alt="anonymous" style="width:80px;height:80px;">
+					</div>
+						
+					<div id="user">
+						<p>User : <?php echo User::getPrenom($login) ?>
+						Statut : Connecté</p>
+						<a href="index.php?action=viewProfil">Voir profil</a>
+					</div>
+					
+					<div id="deconnexion">
+						<a href="index.php?action=deconnexion"><img src="../images/logout.png" alt="logout" style="width:50px;height:50px;"></a>
 					</div>
 				</div>
 			</div>
+			
 		</div>
