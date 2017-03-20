@@ -13,6 +13,17 @@
 			
 		}
 		
+		public static function deconnexion(){
+			session_destroy();
+			$newRequest = new Request();
+			$newRequest->write('controller','anonymous');
+			$newRequest->write('action','defaultAction');
+			$controller = Dispatcher::getCurrentDispatcher()->dispatch($newRequest);
+			$controller->execute();
+			$view = new ViewAnonymous($this);
+			$view->render();
+		}
+		
 		
 		
 		public function defaultAction($r) {
