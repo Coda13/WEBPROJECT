@@ -2,12 +2,12 @@
 	$login = User::get_login();
 ?>
 
-<div id="content">
+<div id="contentUser">
 
 	<h2>Hey <?php echo User::getPrenom($login) ?>, bienvenue sur ton profil !</h2>
 	
 	<div id="avatar">
-		<img src="../images/anonymous.png" alt="avatarAn" style="width:100px;height:100px">
+		<img src="../images/anonymous.png" alt="avatarAn" style="width:200px;height:200px">
 	</div>
 	
 	<div id="info_perso">
