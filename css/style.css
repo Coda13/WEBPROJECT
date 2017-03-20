@@ -107,6 +107,32 @@ button:active{
 	padding : 10px;
 }
 
+/*PARAMETRES HEADER 2*/
+
+#block3{
+	display : flex;
+	background-color : #212121;
+	width : 250px;
+	border-radius: 7px;
+	justify-content : space-between;
+	padding : 7px;
+}
+
+#avatar{
+	margin : auto;
+}
+
+#user{
+	margin : auto;
+	padding : 10px;
+	height : 100%;
+	background-color : blue;
+}
+
+#deconnexion{
+	margin : auto;
+}
+
 /*PARAMETRES DU FOOTER */
 
 #footer{
