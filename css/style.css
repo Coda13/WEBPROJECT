@@ -1,6 +1,6 @@
 /* PARAMETRES DE BASE */
 
-html, body {
+html, body{
 	margin:0;
 	padding:0;
  }
@@ -15,15 +15,19 @@ body{
 div{
 	color : white;
 	font-family : Calibri;	
-	vertical-align:middle
 }
 
 a{
 	color : white;
+	text-decoration:none;
 }
 
 a:visited {
     color: gray;
+}
+
+a:hover {
+    color: #f7a80f;
 }
 
 h2{
@@ -47,6 +51,14 @@ p{
 	margin : auto;
 }
 
+
+#contentUser{
+	width : 80%;
+	margin : auto;
+	text-align : center;
+	height : 1000px;
+	float : left;
+}
 
 #content{
 	width : 80%;
@@ -111,6 +123,7 @@ button:active{
 
 #block3{
 	display : flex;
+	align-content: center;
 	background-color : #212121;
 	width : 250px;
 	border-radius: 7px;
@@ -122,15 +135,10 @@ button:active{
 	margin : auto;
 }
 
-#user{
-	margin : auto;
-	padding : 10px;
-	height : 100%;
-	background-color : blue;
-}
+
 
 #deconnexion{
-	margin : auto;
+	margin : auto;	
 }
 
 /*PARAMETRES DU FOOTER */
@@ -142,6 +150,7 @@ button:active{
 	opacity: 0.8;
 	margin : auto;
 	height : 30px;
+	clear:both;
 }
 
 /*PARAMETRES PAGE ACCUEIL */
@@ -178,4 +187,33 @@ button:active{
 #stats{
 	border : solid white;
 	margin : 20px;
+}
+
+/*PARAMETRES MENU USER*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    background-color: #212121;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #4D4D4D;
+    color: white;
+}
+
+#menu{
+	float : left;
+	height : 1000px;
+	background-color: #212121;
+	overflow: auto;
+	opacity: 0.5;
 }
