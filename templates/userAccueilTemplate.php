@@ -1,20 +1,17 @@
+<?php
+	$login = User::get_login();
+?>
 
-<div id="content">
+<div id="contentUser">
 
-	<h2>Salut cher abonné!</h2>
+	<h2>Salut <?php echo User::getPrenom($login) ?> !</h2>
 	
 	<p>Tu as envie de rejoindre une partie? Consulte les parties en cours !</p>
 	
 	<p><a href="index.php?controller=user&action=viewProfil">Consulte ton profil !</a></p>
 	
 	<div id="contenuAccueil">
-		<div id="partiesEnCours">
-		<h1>Liste des parties en cours : </h1>
-		</div>
-		<p></p>
-		<div id="classement">
-		<h1>Top 5 des meilleurs joueurs : </h1>
-		</div>
+		
 	</div>
 </div>
 
