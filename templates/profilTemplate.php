@@ -11,15 +11,15 @@
 	</div>
 	
 	<div id="info_perso">
-		<h1>Tes infos </h1>
-		<p>Nom : <?php echo User::getNom($login) ?></p> 
-		<p>Prénom : <?php echo User::getPrenom($login) ?></p>
-		<p>Mail : <?php echo User::getMail($login) ?> </p>
+		<div id="cellule"><h1>Tes infos</h1> </div>
+		<div id="cellule">Nom : <?php echo User::getNom($login) ?></div> 
+		<div id="cellule">Prénom : <?php echo User::getPrenom($login) ?></div>
+		<div id="cellule">Mail : <?php echo User::getMail($login) ?> </div>
 	</div>
 	
 	<div id="stats">
-		<h1>Tes stats</h1>
-		<p>Nombre de parties gagnées : </p>
+		<div id="cellule"><h1>Tes stats</h1></div>
+		<div id="cellule">Nombre de parties gagnées : </div>
 	</div>
 	
 	
