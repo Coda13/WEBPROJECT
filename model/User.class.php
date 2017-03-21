@@ -108,7 +108,7 @@
 		
 		public static function setMail($mail,$id){	//a partir de mtn, dans l'url on va avoir iduser
 			$myPDO = parent::db();	//création de l'objet PDO ObjetRandom
-			$sql = "UPDATE users SET mail='$mail' WHERE login=$id";	//récupère le ID de user	
+			$sql = "UPDATE users SET mail='$mail' WHERE login='$id'";	//récupère le ID de user	
 			$stmt = $myPDO->prepare($sql); 
 
 			$stmt->execute();
@@ -116,7 +116,7 @@
 		
 		public static function getMdp($mail){	//pour la récupération du mdp oublié
 			$myPDO = parent::db();	//création de l'objet PDO ObjetRandom
-			$sql = "SELECT password FROM users WHERE MAIL=$mail";	//récupère le ID de user	
+			$sql = "SELECT password FROM users WHERE MAIL='$mail'";	//récupère le ID de user	
 			$stmt = $myPDO->prepare($sql); 
 	
 			$stmt->execute();
@@ -131,7 +131,7 @@
 		
 		public static function setMdp($mdp,$id){	//a partir de mtn, dans l'url on va avoir iduser
 			$myPDO = parent::db();	//création de l'objet PDO ObjetRandom
-			$sql = "UPDATE users SET password='$mdp' WHERE login=$id";	//récupère le ID de user	
+			$sql = "UPDATE users SET password='$mdp' WHERE login='$id'";	//récupère le ID de user	
 			$stmt = $myPDO->prepare($sql); 
 
 	
@@ -185,7 +185,3 @@
 }
 
 ?>
-		
-		
-		
-	
