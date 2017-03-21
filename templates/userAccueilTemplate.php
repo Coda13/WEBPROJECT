@@ -8,11 +8,11 @@
 	
 	<p>Tu as envie de rejoindre une partie? Consulte les parties en cours !</p>
 	
-	<p><a href="index.php?controller=user&action=viewProfil">Consulte ton profil !</a></p>
+	<p>Tu ne te rappelles plus comment jouer, consulte les <a href="index.php?controller=user&action=viewRegles">règles du jeu</a> !</p>
 	
-	<div id="contenuAccueil">
-		
-	</div>
+	<div id="lastPlayed">Dernières parties jouées :</div>
+	
+	
 </div>
 
 
