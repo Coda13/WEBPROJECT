@@ -40,6 +40,16 @@
 			$view = new ViewRegles($this);
 			$view->render();
 		}
+		
+		public function viewCreationPartie($args){
+			$view = new ViewCreationPartie($this);
+			$view->render();
+		}
+		
+		public function viewRejoindrePartie($args){
+			$view = new ViewRejoindrePartie($this);
+			$view->render();
+		}
 	}
 		
 		
