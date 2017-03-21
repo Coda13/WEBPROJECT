@@ -35,6 +35,11 @@
 			$view = new ViewProfil($this);
 			$view->render();
 		}
+		
+		public function viewRegles($args){
+			$view = new ViewRegles($this);
+			$view->render();
+		}
 	}
 		
 		
