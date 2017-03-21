@@ -6,7 +6,7 @@
 
 	<h2>Salut <?php echo User::getPrenom($login) ?> !</h2>
 	
-	<p>Tu as envie de rejoindre une partie? Consulte les parties en cours !</p>
+	<p>Tu as envie de rejoindre une partie? Consulte tes <a href="index.php?controller=user&action=viewRejoindrePartie">parties en cours</a> !</p>
 	
 	<p>Tu ne te rappelles plus comment jouer, consulte les <a href="index.php?controller=user&action=viewRegles">règles du jeu</a> !</p>
 	
@@ -14,5 +14,6 @@
 	
 	
 </div>
+
 
 
