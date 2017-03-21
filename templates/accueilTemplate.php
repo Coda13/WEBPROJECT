@@ -4,7 +4,6 @@
 		
 			<h2>Bienvenue!</h2>
 			
-			<p>Tu as envie de rejoindre une partie en anonyme ? Consulte les parties en cours !</p>
 			
 			<p>Tu veux rejoindre la communauté 6QuiPrend ? <a href="index.php?action=viewInscription">Inscris toi !</a> </p>
 			<p></p>
