@@ -4,35 +4,27 @@
 
 		<div id="content">
 	
-		<h2>Inscription</h2>
+		<h2>Modifier le profil</h2>
 
 
 		<center>
 		<form action="index.php?action=validateModificationProfil" method="post">
 			<table>
 				<tr>
-					<th>Mail :</th>
-					<td><input type="text" name="modifMail" /></td>
-				</tr>
-				<tr>
-					<th>Nom :</th>
-					<td><input type="text" name="modifNom" ></td>
-				</tr>
-				<tr>
-					<th>Prénom :</th>
-					<td><input type="text" name="modifPrenom" /></td>
+					<div id="celluleTitre"><h1>Tes infos</h1> </div>
+					<div id="cellule">NOM : <input type="text" name="modifNom" ></div> 
+					<div id="cellule">PRENOM : <input type="text" name="modifPrenom" /></div>
+					<div id="cellule">MAIL : <input type="text" name="modifMail" /> </div>
 				</tr>
 				<tr>
 					<th />
-					<td><input type="submit" value="modifierProfil" /></td>
+					<td><input type="submit" value="Valider les modifications" /></td>
 				</tr>
 			</table>
 		</form>
 		
-		<p>/!\ Tous les champs sont obligatoires</p>
-		
 		</center>
 		
 		
+		
 		</div>
-	
