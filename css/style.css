@@ -181,25 +181,31 @@ button:active{
 /*PARAMETRES PROFIL*/
 
 #info_perso{
-	border : solid white;
 	margin : auto;
 	width : 50%;
+	margin-bottom : 50px;
 	
 }
 
 #stats{
-	border : solid white;
 	margin : auto;
 	width : 50%;
+	margin-bottom : 50px;
 }
 
 #cellule{
-	border : solid white;
-	height : 60px;
+	background-color : #191B1A ;
+	height : 40px;
+	padding : 17px 0px 0px 0px;
+	border : 0.5px solid #38393B;
+}
+
+#celluleTitre{
+	background-color : #38393B;
 }
 
 #avatar{
-	margin-bottom : 20px;
+	margin-bottom : 50px;
 }
 
 /*PARAMETRES MENU USER*/
