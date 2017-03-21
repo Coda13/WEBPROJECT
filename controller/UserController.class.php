@@ -50,6 +50,43 @@
 			$view = new ViewRejoindrePartie($this);
 			$view->render();
 		}
+		
+		
+		
+	/************************************************************************************************************************************************************
+	
+	Gestion du Profil 
+	
+	******************************************************************************************************/
+	
+	
+	
+	public function modifierProfil(){
+		$view= new ViewUserModifierProfil($this);
+		$view-> render();
+	}
+	
+	
+	public function validateModificationProfil($args){
+		$id = User::get_login();
+		
+		$mail = $args->read('modifMail');
+		if($mail!=NULL)
+			User::setMail($mail,$id);
+         $nom = $args->read('modifNom');
+		if($nom!=NULL)
+			User::setNom($nom,$id);
+		$prenom = $args->read('modifPrenom'); 
+		if($prenom!=NULL)
+			User::setPrenom($prenom,$id);
+		
+        $view = new ViewProfil($this);
+        $view->render();
+	}
+}
+		
+		
+
 	}
 		
 		
