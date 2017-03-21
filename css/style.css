@@ -58,6 +58,7 @@ p{
 	text-align : center;
 	height : 1000px;
 	float : left;
+	margin-left : 20px;
 }
 
 #content{
@@ -144,10 +145,10 @@ button:active{
 /*PARAMETRES DU FOOTER */
 
 #footer{
-	background-color : black;
+	background-color : #212121;
 	text-align : center;
 	padding : 10px;
-	opacity: 0.8;
+	opacity: 0.5;
 	margin : auto;
 	height : 30px;
 	clear:both;
@@ -181,12 +182,24 @@ button:active{
 
 #info_perso{
 	border : solid white;
-	margin : 20px;
+	margin : auto;
+	width : 50%;
+	
 }
 
 #stats{
 	border : solid white;
-	margin : 20px;
+	margin : auto;
+	width : 50%;
+}
+
+#cellule{
+	border : solid white;
+	height : 60px;
+}
+
+#avatar{
+	margin-bottom : 20px;
 }
 
 /*PARAMETRES MENU USER*/
@@ -216,4 +229,16 @@ li a:hover:not(.active) {
 	background-color: #212121;
 	overflow: auto;
 	opacity: 0.5;
+}
+
+/*PARAMETRES REGLES*/
+
+#exemple{
+	text-align : center;
+	font-style : italic;
+	color : gray;
+}
+
+li{
+	text-align : center;
 }
