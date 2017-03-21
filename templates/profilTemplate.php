@@ -22,6 +22,8 @@
 		<div id="cellule">Nombre de parties gagnées : </div>
 	</div>
 	
+	<a href="index.php?action=modifierProfil">Modifier les infos</a>
+	
 	
 	
 </div>
