@@ -20,7 +20,7 @@
 			if(!class_exists($controllerClassName)){
 				throw new Exception ('Controller inconnu : '.ucfirst($controllerName));
 			}
-			echo $controllerClassName;
+			//echo $controllerClassName;
 			return new $controllerClassName($request);
 		}
 		
