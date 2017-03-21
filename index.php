@@ -25,7 +25,7 @@
 	
 	session_start();
 	//session_destroy();
-	print_r($_SESSION);
+	//print_r($_SESSION);
 	// Reify the current request
 	$request = Request::getCurrentRequest();
 	
