@@ -161,7 +161,7 @@
 		
 		public static function setNom($nom,$id){	
 			$myPDO = parent::db();
-			$sql = "UPDATE users SET NOM='$nom' WHERE login='$id'";		
+			$sql = "UPDATE users SET nom='$nom' WHERE login='$id'";		
 			$stmt = $myPDO->prepare($sql); 
 	
 		
