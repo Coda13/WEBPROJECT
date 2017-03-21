@@ -56,7 +56,6 @@ p{
 	width : 80%;
 	margin : auto;
 	text-align : center;
-	height : 1000px;
 	float : left;
 	margin-left : 20px;
 }
@@ -152,6 +151,7 @@ button:active{
 	margin : auto;
 	height : 30px;
 	clear:both;
+	float:bottom;
 }
 
 /*PARAMETRES PAGE ACCUEIL */
