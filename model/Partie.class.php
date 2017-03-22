@@ -4,7 +4,7 @@
 		public static function exists($id){
 			
 			$myPDO = parent::db();
-			$sql = "SELECT ID_PARTIE FROM partie WHERE ID_PARTIE=$id";
+			$sql = "SELECT ID_PARTIE FROM partie WHERE ID_PARTIE='$id'";
 			
 			$stmt = $myPDO->prepare($sql); 
 			
