@@ -106,10 +106,9 @@
 		}
 	}
 	
-	public function rejoindreLaPartie($idPartie,$login){
-		$myPDO = parent::db();
-		$stmt = $myPDO->prepare("INSERT INTO rejoindre (LOGIN,ID_PARTIE,SCORE) VALUES ('$login','$idPartie',0)");
-		$stmt->execute();
-		
+	public function rejoindreLaPartie($args){
+		$log = User::get_login();
+		$idPartie = $args->read('idPartie');
+		Partie::rejoindrePartie($idPartie,$log);
 	}
 }
