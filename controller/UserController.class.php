@@ -86,7 +86,7 @@
 	
 	/***********************************************************************************************************
 	
-	Création d'une partie 
+	Gestion d'une partie 
 	
 	***********************************************************************************************************/
 	
@@ -104,5 +104,12 @@
 			$view= new ViewInvitation($this);
 			$view->render();
 		}
+	}
+	
+	public function rejoindreLaPartie($idPartie,$login){
+		$myPDO = parent::db();
+		$stmt = $myPDO->prepare("INSERT INTO rejoindre (LOGIN,ID_PARTIE,SCORE) VALUES ('$login','$idPartie',0)");
+		$stmt->execute();
+		
 	}
 }
