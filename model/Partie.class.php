@@ -63,7 +63,7 @@
 		}
 		
 		
-	function listePartie($login){
+	 	public  static function listePartie($login){
 		
 		
 		$arrayUsers=User::getTableauUsers();
