@@ -47,7 +47,10 @@
 		}
 		
 		public function viewRejoindrePartie($args){
-			$view = new ViewRejoindrePartie($this);
+			
+			$allParties = Partie::listeParties();
+			$view = new ViewRejoindrePartie($this);			
+			$view->setArg('allParties',$allParties);
 			$view->render();
 		}
 		
