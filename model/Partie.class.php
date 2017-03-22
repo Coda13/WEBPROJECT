@@ -29,4 +29,39 @@
 			$stmt = $myPDO->prepare("INSERT INTO partie (ETAT,NB_JOUEURS,ID_PARTIE,LOGIN) VALUES ('EnCours',1,'$id','$login')");
 			$stmt->execute();
 		}
+		
+		
+		
+		/*****************************************************************************************************************
+		
+		Partie Accesseurs
+		
+********************************************************************************************************/
+		
+		
+		public static function getIdPartie($idp) {//permet de recuperer l'id de la partie 	
+				
+			$myPDO = parent::db();	
+			$sql = "SELECT ID_PARTIE FROM PARTIE WHERE LOGIN='$idp'";	
+			
+				
+			$stmt = $myPDO->prepare($sql); 
+			$stmt->execute();
+			$donnees = $stmt->fetch(PDO::FETCH_OBJ);	
+			
+			
+			
+			$array = array();
+			
+			while(!empty($donnees)) {	
+				$array[] = $donnees->ID_PARTIE;
+				$donnees = $stmt->fetch(PDO::FETCH_OBJ);
+			}
+
+			$stmt->closeCursor();		
+			return $array;
+		}
+		
+		
+		
 	}
