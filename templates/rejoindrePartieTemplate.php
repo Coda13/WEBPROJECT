@@ -10,8 +10,10 @@
 	<?php 
 	//print_r($allParties) 
 	
+	
 	for ($i=0;$i<sizeof($allParties);$i++){
-		echo "<div id='cellule'>".$allParties[$i]->ID_PARTIE." créée par ".$allParties[$i]->LOGIN."</div>";
+		$id_partie = $allParties[$i]->ID_PARTIE;
+		echo "<div id='cellule'><a href='index.php?action=viewCaracteristiquesPartie&idPartie=$id_partie'>".$id_partie."</a> créée par ".$allParties[$i]->LOGIN."</div>";
 	}
 	
 	
