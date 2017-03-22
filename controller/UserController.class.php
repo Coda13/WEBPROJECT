@@ -73,16 +73,29 @@
 		$mail = $args->read('modifMail');
 		if($mail!=NULL)
 			User::setMail($mail,$id);
-         $nom = $args->read('modifNom');
+         	$nom = $args->read('modifNom');
 		if($nom!=NULL)
 			User::setNom($nom,$id);
 		$prenom = $args->read('modifPrenom'); 
 		if($prenom!=NULL)
 			User::setPrenom($prenom,$id);
 		
-        $view = new ViewProfil($this);
-        $view->render();
+		$view = new ViewProfil($this);
+		$view->render();
 	}
+		
+		public function supprimerProfil(){
+			$id = User::get_login();
+			User::suppressionCompte($id);
+			session_destroy();
+			$newRequest = new Request();
+			$newRequest->write('controller','anonymous');
+			$newRequest->write('action','defaultAction');
+			$controller = Dispatcher::getCurrentDispatcher()->dispatch($newRequest);
+			$controller->execute();
+			$view = new ViewAnonymous($this);
+			$view->render();
+		}
 	
 	/***********************************************************************************************************
 	
