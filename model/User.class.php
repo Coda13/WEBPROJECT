@@ -43,7 +43,7 @@
 		$reponse = $myPDO->query($sql);
 		$donnees = $stmt->fetch(PDO::FETCH_OBJ);
 		
-		if ($password==$donnees->password){
+		if ($password==$donnees->PASSWORD){
 			$stmt->closeCursor();
 			return true;
 		}
@@ -185,3 +185,7 @@
 }
 
 ?>
+		
+		
+		
+	
