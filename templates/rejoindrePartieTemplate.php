@@ -3,13 +3,20 @@
 	
 	function listePartie($login){
 		
-		$array= Partie::getIdPartie($login);
-		$count = sizeof($array);
+		
+		$arrayUsers=User::getTableauUsers();
+		
+		
+		$countUsers = sizeof($arrayUsers);
+		
+		for($j=0;$j<$countUsers;$j++){
 			
-		for($i=0;$i<$count;$i++){	
+				$arrayParties= Partie::getIdPartie($arrayUsers[$j]);
+				$countParties= sizeof($arrayParties);
+				for($i=0;$i<$countParties;$i++){
 			
-			echo $login." a crée : ".$array[$i]; //faire les liens pour cliquer vers la partie
-			
+				echo "<br>".$arrayUsers[$j]." a crée : ".$arrayParties[$i] ; //faire les liens pour cliquer vers la partie
+			}
 		}
 	}
 ?>
