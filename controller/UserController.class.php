@@ -83,10 +83,26 @@
         $view = new ViewProfil($this);
         $view->render();
 	}
-}
-		
-		
-
 	
+	/***********************************************************************************************************
+	
+	Création d'une partie 
+	
+	***********************************************************************************************************/
+	
+	public function creationPartie($args){
+		$log = User::get_login();
 		
-		
+		$id_partie = $args->read('idPartie');
+		if(Partie::exists($id_partie)){
+			$view = new ViewErreurInscription($this);
+			$view->setArg('inscErrorText',"Une partie de même nom existe déjà.");
+			$view->render();
+		}
+		else{
+			Partie::create($id_partie,$log);
+			$view= new ViewInvitation($this);
+			$view->render();
+		}
+	}
+}
