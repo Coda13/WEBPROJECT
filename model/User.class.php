@@ -74,6 +74,13 @@
 			return $array;
 	
 		}
+		
+		public function rejoindrePartie($idPartie,$login){
+			$myPDO = parent::db();
+			$stmt = $myPDO->prepare("INSERT INTO rejoindre (LOGIN,ID_PARTIE,SCORE) VALUES ('$login','$idPartie',0)");
+			$stmt->execute();
+		
+		}
 	
 	
 		
