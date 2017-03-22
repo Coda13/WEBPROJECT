@@ -31,28 +31,49 @@
 		}
 		
 	
-	
-		/*******/
 		
-	public static function isPassword($login,$password){
-		$myPDO = DatabasePDO::getCurrentObject();	
-		$sql = "SELECT PASSWORD FROM users WHERE LOGIN='$login'";	
-		$stmt = $myPDO->prepare($sql); 
-		$stmt->execute();
+		public static function isPassword($login,$password){
+			$myPDO = DatabasePDO::getCurrentObject();	
+			$sql = "SELECT PASSWORD FROM users WHERE LOGIN='$login'";	
+			$stmt = $myPDO->prepare($sql); 
+			$stmt->execute();
 		
-		$reponse = $myPDO->query($sql);
-		$donnees = $stmt->fetch(PDO::FETCH_OBJ);
+			$reponse = $myPDO->query($sql);
+			$donnees = $stmt->fetch(PDO::FETCH_OBJ);
 		
-		if ($password==$donnees->PASSWORD){
-			$stmt->closeCursor();
-			return true;
-		}
-		else{
-			$stmt->closeCursor();
-			return false;
-		}
+			if ($password==$donnees->PASSWORD){
+				$stmt->closeCursor();
+				return true;
+			}
+			else{
+				$stmt->closeCursor();
+				return false;
+			}
 			
-	}
+		}
+		
+		
+		public static function getTableauUsers() {
+		//interroge la base de donnée pour savoir si un login est utilisé ou non
+			$myPDO = parent::db();	//création de l'objet PDO ObjetRandom
+			$sql = "SELECT LOGIN FROM users ";	//récupère tous les logins 
+				
+			$stmt = $myPDO->prepare($sql); 
+			$stmt->execute();
+		
+			$reponse = $myPDO->query($sql);	//on exécute la requete sql
+			$donnees = $stmt->fetch(PDO::FETCH_OBJ);	//les résultats de la requete sont stockés dans $donnees
+			$array = array();
+		
+			while(!empty($donnees)) {	
+				$array[] = $donnees->LOGIN;
+				$donnees = $stmt->fetch(PDO::FETCH_OBJ);
+			}
+
+			$stmt->closeCursor();		
+			return $array;
+	
+		}
 	
 	
 		
